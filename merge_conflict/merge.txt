@@ -1,0 +1,27 @@
+create master , hotfixchg , develop branches
+add txt file in master and hotfixchg
+add txt file in develop 
+
+master and hotfixchg should have same changes
+
+then make changes in develop
+and execute command 
+git pull origin master 
+or git pull origin hotfixchg
+
+then 
+your conflict changes will be reflected in develop
+so accept both changes and execute git command
+
+
+
+git command are as below
+
+git status
+git add .
+git commit -m "commit name"
+git push
+
+git pull origin master
+
+#Lado
