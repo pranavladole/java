@@ -1,1 +1,22 @@
+What are the features of java8?
 
+default and static methods
+Functional Interfaces and Lambda Expressions
+Collection API
+Java Time API
+forEach() method
+Concurrency API
+Java Stream API
+
+//
+What advantages does Java 8 bring?
+
+Code is more concise and readable
+Code is more reusable
+Code is more testable and maintainable
+Code is now both callable and concurrent
+Users can write parallel code
+Users can write database-like operations
+Applications now perform better
+Code is far more productive
+//
