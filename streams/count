@@ -1,0 +1,20 @@
+package example;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		List<Integer> list = Arrays.asList(5,10,12,20,21);
+		long  filteredlist =  list.stream().filter(t ->t>10)
+				.count();		
+		System.out.print(filteredlist);
+		
+		
+		
+	}
+
+}
