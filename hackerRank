@@ -35,6 +35,42 @@ for(int i=1;i<=10;i++){
             System.out.println("");
 
 
+## static innitalizer
+
+Scanner sc = new Scanner(System.in);
+        B = sc.nextInt();
+        H = sc.nextInt();
+        
+        try{
+        if(B<=  0 || H <= 0)
+        {
+            flag=false;
+            throw new Exception("Breadth and height must be positive");
+            
+        }    
+        }
+        
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }  
+        
+        }
+ ## int to string
+
+String s = Integer.toString(n); 
+
 ##
+ 
+         String us = NumberFormat.getCurrencyInstance( Locale.US ).format(payment);
+         
+         String china = NumberFormat.getCurrencyInstance(Locale.CHINA ).format(payment);
+         
+         String france = NumberFormat.getCurrencyInstance( Locale.FRANCE ).format(payment);
+         
+         String india = NumberFormat.getCurrencyInstance( 
+             new Locale("en","in")
+         ).format(payment);         
+        
 
 
