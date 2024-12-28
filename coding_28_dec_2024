@@ -56,6 +56,57 @@
         b=c;
         c=a+b;
         }
+//
+
+    // to check if string is palindrome or not
+    System.out.print(palindrome("maoam"));
+    }
+    
+    public static boolean palindrome(String name){
+    boolean check = true;
+    int length = name.length();
+    for(int i=0;i< length/2 ; i++){
+        if(name.charAt(i) != name.charAt(length-i-1)){
+            check =  false;
+            break;
+        }
+    }   
+    return check;
+
+//
+
+// To remove white spaces
+   String input = "pranav ladole";
+   StringBuilder output = new StringBuilder();
+   
+   char[] charArray = input.toCharArray();
+   
+   for(char c : charArray){
+       if(!Character.isWhitespace(c)){
+           output.append(c);
+       }
+   }
+   System.out.println(output.toString());
+    }
 
 
-https://www.digitalocean.com/community/tutorials/java-programming-interview-questions#5-write-a-java-program-to-print-a-fibonacci-sequence-using-recursion
+//
+
+
+   // to remove starting and ending white space
+   String s = "  acb";
+   s = s.strip();
+   System.out.print(s);
+
+//
+
+// factorial of a number;
+        System.out.print(factorial(5));
+    }
+    public static int factorial(int num){
+        if(num == 1){
+            return 1;
+        }else{
+        return (num*factorial(num-1)) ;    
+        }
+    }
