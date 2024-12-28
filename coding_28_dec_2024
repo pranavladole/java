@@ -1,0 +1,61 @@
+// revrese string
+        String in = "pranav";
+        StringBuilder out = new StringBuilder();
+        char[] chars = in.toCharArray();
+        for(int i = chars.length-1 ; i>=0 ; i--){
+            out.append(chars[i]);
+        }
+        System.out.print(out);
+    }
+
+//
+
+    // swap without temp
+        int a = 5;
+        int b=10;
+        
+        a=a+b;
+        b=a-b;
+        a=a-b;
+
+//
+
+// to check vowel is present
+    // vovel a,e,i,o,u
+    String check = "pranav";
+    boolean val = check.toLowerCase().matches(".*[aeiou].*");
+    System.out.println(val);
+
+//
+
+// to check prime number
+        if(n ==0 || n ==1){
+            return false;
+        }
+        if(n==2){
+            return true;
+        }
+        for(int i=2;i <= n/2;i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+//
+
+// fibonacci series
+    int count =10;
+    int a=0;
+    int b=1;
+    int c=1;
+    for(int i=0;i<count;i++){
+        System.out.print(a+", ");
+        a=b;
+        b=c;
+        c=a+b;
+        }
+
+
+https://www.digitalocean.com/community/tutorials/java-programming-interview-questions#5-write-a-java-program-to-print-a-fibonacci-sequence-using-recursion
