@@ -1,1 +1,73 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
 
+class Main {
+    public static void main(String[] args) {
+        // to check 2 array contains same element
+        
+        Integer[] a1={1,2,3,4};
+        Integer[] b1={1,2,3,4,2,1};
+        Integer[] c1={1,2,3,4};
+        
+        System.out.println(sameElement(a1,a2));
+        System.out.println(sameElement(a2,a3));        
+    }
+    
+    public static boolean sameElement(Object[] array1,Object[] array2){
+        
+        Set<Object> uniq1 = new HashSet<>(Arrays.asList(array1));
+
+        Set<Object> uniq2 = new HashSet<>(Arrays.asList(array2));
+        
+        if(uniq1.size()!=uniq2.size()) return false;
+        
+        
+        for(Object obj: uniq1){
+            if(!uniq2.contains(obj)) return false;
+        }
+        return true;
+        
+    }
+}
+
+// to find sum in array        
+
+Integer[] a1={1,2,3,4};
+        int sum=0;
+        for( int i:a1 ){
+            sum = sum+i;
+        }
+        System.out.print(sum);
+
+
+//
+
+ // to find largest and second largest element
+           Integer[] array = {5, 2, 8, 3, 1};
+        
+        // Sorting the array in descending order
+        Arrays.sort(array);
+        int length = array.length;
+        int element = array[length-2];
+        // Printing the sorted array
+        System.out.println("second largest element: "
+        + element);
+//
+// print date in specified format
+    SimpleDateFormat simpledateformat= new SimpleDateFormat("MM-dd-yyyy");
+    
+    System.out.print( simpledateformat.format(new Date()) );
+    //
+
+
+    // merge 2 list
+    List<String> list1 =  new ArrayList<>();
+    list1.add("a");
+    List<String> list2 =  new ArrayList<>();
+    list2.add("b");    
+    list2.add("c");    
+    
+    list1.addAll(list2);
+    System.out.print(list1.toString());
+
+//
