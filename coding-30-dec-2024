@@ -101,3 +101,20 @@ public String convert(String s) {
        String result = String.join(" ",stringList);
           return result; 
     
+
+
+// to findelement occuting more than 1
+  public List<Integer> findDuplicates(int[] arr) {
+       Map<Integer,Integer> countMap = new HashMap<>();
+           List <Integer> ele = new ArrayList<>();
+        for(int number: arr){
+         countMap.put(number, countMap.getOrDefault(number,0) +1);
+        }
+     
+           for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+               if(entry.getValue()>1){
+                    ele.add(entry.getKey());
+               }
+        }  
+        return ele;
+    }
