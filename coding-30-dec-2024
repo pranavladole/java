@@ -60,3 +60,25 @@ int n = 10
     }
 
 //
+https://www.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1?page=1&sortBy=submissions
+
+minmax.add(i);
+                minmax.add(j);
+
+
+
+majority
+
+class Solution {
+    static int majorityElement(int arr[]) {
+          HashMap<Integer, Integer> countMap = new HashMap<>();
+         for(int i:arr){
+             countMap.put(i,countMap.getOrDefault(i, 0) + 1);
+              
+             if(countMap.get(i)> arr.length/2){
+                 return i;
+             }
+         }
+         return -1;
+    }
+}
