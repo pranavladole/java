@@ -82,3 +82,22 @@ class Solution {
          return -1;
     }
 }
+
+//
+
+public String convert(String s) {
+       String name = s;
+        String lowercase = name.toLowerCase();
+            List<String> stringList = new ArrayList<>();
+        String[] words = lowercase.split(" ");
+        
+         int length = words.length;
+        for(int i=0;i<=length-1;i++){
+        words[i] =     (Character.toUpperCase(words[i].charAt(0)))
+            +words[i].substring(1);
+            stringList.add(words[i]);
+        }
+     
+       String result = String.join(" ",stringList);
+          return result; 
+    
