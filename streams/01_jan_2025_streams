@@ -57,4 +57,28 @@ List<Integer> list = Arrays.asList(1,2,3,4,1,2,7,4,11);
 		// large 2 
 		int large = list.stream().sorted((a,b) ->Integer.compare(b, a)).distinct().skip(1).findFirst().orElse(null);
 		System.out.println("2 large "+ large);
+//
+max length
+		List<String> liststring = Arrays.asList("a","b","dddef","def","dsf");
+
+		// get max 
+		Optional<String> count =  liststring.stream().max(Comparator.comparingInt(String::length));
+		System.out.println(count);
+
+//missing number
+    	
+		HashSet<Integer> set = new HashSet<Integer>();
+		for(int i:arr) {
+			set.add(i);
+		}
+		int i=1;
+		
+		while(true) {
+			if(!set.contains(i)) {
+				
+				return i;
+			}
+			i++;
+		}
+	
 		
