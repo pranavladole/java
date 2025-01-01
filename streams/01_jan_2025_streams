@@ -1,1 +1,5 @@
+// to find average
 
+List<Integer> list = Arrays.asList(1,2,3,4);
+		Double avg =  list.stream().mapToDouble(Integer::doubleValue).average().orElse(0.0);
+		System.out.println(avg);
