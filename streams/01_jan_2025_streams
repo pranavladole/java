@@ -3,3 +3,58 @@
 List<Integer> list = Arrays.asList(1,2,3,4);
 		Double avg =  list.stream().mapToDouble(Integer::doubleValue).average().orElse(0.0);
 		System.out.println(avg);
+// upper case
+
+	List<String> list = Arrays.asList("abc","def","E");
+		List<String> upperCase =  list.stream().map( e ->e.toUpperCase()).collect(Collectors.toList());
+		System.out.println(upperCase);
+
+// sum of even odd
+List<Integer> list = Arrays.asList(1,2,3,4);
+		int sumOfEven =   list.stream().filter(e -> e %2==0).mapToInt(Integer::intValue).sum();
+		System.out.println(sumOfEven);
+		
+		int sumOfOdd = list.stream().filter(e -> e%2!=0).mapToInt(Integer::intValue).sum();
+		System.out.println(sumOfOdd);
+
+// distinct element
+		List<Integer> list = Arrays.asList(1,2,3,4,1,2,7,4,11);
+		List<Integer> distinct =   list.stream().distinct().collect(Collectors.toList());
+		System.out.println(distinct);
+
+//
+	List<Integer> list = Arrays.asList(1,2,3,4,1,2,7,4,11);
+		int max = list.stream().max(Integer::compareTo).orElse(null);
+		int  min = list.stream().min(Integer::compareTo).orElse(null);
+		
+		System.out.println("min "+min);
+		System.out.println("max "+max);
+	//
+start with r
+List<Integer> list = Arrays.asList(1,2,3,4,1,2,7,4,11);
+		List<String> colors = Arrays.asList("red","white","pink","rose");
+		String start = "r";
+		int count = (int) colors.stream().filter( s-> s.startsWith(start)).count();
+		
+		System.out.println("count "+count);
+//
+
+		List<Integer> list = Arrays.asList(1,2,3,4,1,2,7,4,11);
+		List<String> colors = Arrays.asList("red","white","pink","rose");
+		
+		List<String> asc  =  colors.stream().sorted()
+				.collect(Collectors.toList());
+
+		List<String> dsc  =  colors.stream().sorted(Comparator.reverseOrder())
+				.collect(Collectors.toList());
+		
+		System.out.println("asc "+asc);
+		System.out.println("dsc "+dsc);
+//
+// smallest 2
+		int small = list.stream().sorted().distinct().skip(1).findFirst().orElse(null);
+		System.out.println("2 small "+ small);
+		// large 2 
+		int large = list.stream().sorted((a,b) ->Integer.compare(b, a)).distinct().skip(1).findFirst().orElse(null);
+		System.out.println("2 large "+ large);
+		
