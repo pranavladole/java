@@ -40,3 +40,17 @@ public static boolean isPowerofTwo(int n) {
           }
           return check;
     }
+
+//
+to find index using arraylist
+     int num=0;
+        for(int i=0;i<arr.size();i++){
+            if(arr.get(i)==k){
+                num = i+1;
+                break;
+            }else{
+                num = -1;
+            }
+        }
+
+        return num;
