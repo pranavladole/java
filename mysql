@@ -1,0 +1,2 @@
+select e.name,l.book_name,l.issue_date from student.employee e 
+join student.library l on e.id=l.employee_id where e.id = 1;
