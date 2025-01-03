@@ -1,0 +1,28 @@
+package jan_03;
+
+public class SecondLargest {
+
+	public static void main(String[] args) {
+		int[] arr= { 3,1,5,7,9,10 };
+		if(arr.length<2) {
+			System.out.println("array length must be greater than 2");
+		}
+		int seclargest = secondLargest(arr);
+		System.out.println("seclargest:" +seclargest);
+	}
+	
+	public static int secondLargest(int [] arr) {
+		int firstLargest =Integer.MIN_VALUE;
+		int secondLargest =Integer.MIN_VALUE;
+		for(int num:arr) {
+			if(num>firstLargest) {
+				secondLargest = firstLargest;
+				firstLargest = num;
+				
+			} else if( num > secondLargest && num != firstLargest ) {
+				secondLargest=num;
+			}
+		}
+		return secondLargest;
+	}
+}
