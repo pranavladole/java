@@ -26,3 +26,14 @@ public class SecondLargest {
 		return secondLargest;
 	}
 }
+
+//
+
+flat map
+System.out.println(arrayList);
+		
+		List<Integer> ids = arrayList.stream().map(e -> e.getId()).collect(Collectors.toList());
+		System.out.println(ids);
+		
+		Set<String> city = arrayList.stream().flatMap(e -> e.getCity().stream()).collect(Collectors.toSet());
+		System.out.println(city); 
