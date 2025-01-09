@@ -1,0 +1,5 @@
+to find duplicate using stream
+List<Integer> arr = {11,22,33,44,11};
+Set<Integer> sets = new HashSet<>();
+arr.stream().filter( n -> !sets.add(n)).forEach(System.out::Println);
+
