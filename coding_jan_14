@@ -50,3 +50,22 @@ public class Solution {
      return new String(result);
     }
 }
+//
+
+arithematic
+  if (arr.length < 2) {
+            return "Array is arithmetic";
+        }
+        
+        int diff = arr[1] - arr[0]; // Initial difference
+        
+        // Iterate from the second element to the last element
+        for (int i = 1; i < arr.length - 1; i++) {
+            // Check if the difference between consecutive elements matches
+            if (arr[i + 1] - arr[i] != diff) {
+                return "Array isn't arithmetic";
+            }
+        }
+        
+        // If all differences are the same, it's arithmetic
+        return "Array is arithmetic";
