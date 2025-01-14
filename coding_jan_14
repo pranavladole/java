@@ -36,3 +36,17 @@ public class Solution {
 
     }
 }
+//
+
+converting alternate character to upper case
+public class Solution {
+    public static String toSpongeCase(String input) {
+     char[] result = input.toCharArray();
+     for(int i=0;i<input.length();i++){
+         if(i%2!=0){
+             result[i] =  Character.toUpperCase(result[i]); 
+         }
+     }
+     return new String(result);
+    }
+}
